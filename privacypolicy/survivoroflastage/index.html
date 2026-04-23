@@ -59,6 +59,76 @@
 
 <p><strong>iStudio</strong> ("we", "our", or "us") respects your privacy. This Privacy Policy describes how we collect, use, store, and share information when you use our mobile game <strong>Survivor of Last Age</strong> (the "App"). By downloading, installing, or using the App, you acknowledge this Privacy Policy. Where required by applicable law, we will request your consent before certain processing activities, especially for personalized advertising.</p>
 
+<p class="note">
+This Privacy Policy is intended to reflect the technologies currently integrated into the App, including Google Firebase and Google AdMob. It is provided for general informational purposes and should be reviewed by a qualified legal professional for compliance in the jurisdictions where your App is distributed.
+</p>
+
+<h2 id="data-deletion">Data deletion requests</h2>
+<p><strong>App:</strong> Survivor of Last Age &nbsp;|&nbsp; <strong>Developer:</strong> iStudio</p>
+<p>If you want us to delete or de-identify <strong>cloud-side data</strong> associated with your use of the App, follow the steps below. This section is provided for users who arrive here from the <strong>Google Play</strong> data deletion URL field and summarizes what we can delete, what may remain, and typical retention behavior for the technologies used in this App.</p>
+
+<h3>Steps to request deletion</h3>
+<ol>
+    <li>Open the <strong>Survivor of Last Age</strong> app, go to <strong>Settings</strong>, then tap <strong>Data deletion request</strong>.</li>
+    <li>When your device email app opens with a pre-filled message (including identifiers that help us locate your records), send the email to complete your request.</li>
+</ol>
+<p>If the button is unavailable, you may email us directly at <a href="mailto:istudio1319@gmail.com?subject=Survivor%20of%20Last%20Age%20-%20Data%20deletion%20request">istudio1319@gmail.com</a> using the subject line <strong>Survivor of Last Age - Data deletion request</strong> and include the same identifiers you would have sent from the App (for example your Firebase anonymous <strong>UID</strong>, your in-game <strong>nickname</strong>, and your device <strong>advertising ID</strong> (GAID on Android / IDFA on iOS) if you can copy it from the pre-filled message or device settings).</p>
+
+<h3>Data types: what we delete on a verified request vs. what may remain</h3>
+<p>After we reasonably verify your request, we intend to take the actions below for the services we control or can instruct on your behalf. Timelines are <strong>best-effort</strong> unless a stricter deadline applies under applicable law. Nothing in this table limits our right to retain information where required for legal, security, fraud-prevention, or technical reasons.</p>
+<table>
+    <thead>
+        <tr>
+            <th>Data category (as used in this App)</th>
+            <th>Typical action after a verified request</th>
+            <th>May be retained / additional notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Firebase Authentication</strong> (anonymous user / UID)</td>
+            <td>Delete the Firebase Auth user tied to your UID where technically feasible.</td>
+            <td>Google’s infrastructure may retain data for a limited time in backups or logs; see <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy documentation</a>.</td>
+        </tr>
+        <tr>
+            <td><strong>Cloud Firestore</strong> — leaderboards (<code>leaderboards/{boardId}/entries/{userId}</code>)</td>
+            <td>Delete leaderboard documents associated with your user ID.</td>
+            <td>Short propagation delay; copies in backups until expired per Google/Firebase practices.</td>
+        </tr>
+        <tr>
+            <td><strong>Cloud Firestore</strong> — nickname registry (<code>nickname_claims</code>)</td>
+            <td>Remove the nickname claim document associated with your nickname / UID as feasible.</td>
+            <td>Same backup / propagation caveats as other Firestore data.</td>
+        </tr>
+        <tr>
+            <td><strong>Google Analytics for Firebase</strong></td>
+            <td>We use Google’s supported <strong>user data deletion</strong> mechanisms and identifiers you provide (for example user or app-instance identifiers as accepted by Google for your property).</td>
+            <td>Google states that updates to individual user reporting may take up to about <strong>72 hours</strong>, and complete removal from Analytics systems follows Google’s processing schedules. Ongoing storage of event data is also limited by your property’s <strong>data retention</strong> settings (commonly <strong>2 months</strong> or <strong>14 months</strong> for user- and event-level data, plus rules for certain signals)—see <a href="https://support.google.com/analytics/answer/7667196" target="_blank" rel="noopener">Google Analytics: Data retention</a> and <a href="https://support.google.com/analytics/answer/9940393" target="_blank" rel="noopener">Data-deletion requests (Analytics Help)</a>. This App does <strong>not</strong> use Firebase Analytics export to BigQuery.</td>
+        </tr>
+        <tr>
+            <td><strong>Firebase Crashlytics</strong></td>
+            <td>We use Google/Firebase-supported processes to request deletion or de-identification where available for crash and diagnostics data linked to identifiers you provide.</td>
+            <td>Retention and deletion are governed by Google’s Firebase/Crashlytics policies; some diagnostic data may persist for a limited period until rolled off or deleted under Google’s schedules. If you later enable optional exports (for example to BigQuery or Cloud Logging), deletion in those products would require separate handling—currently <strong>not enabled</strong> for this App.</td>
+        </tr>
+        <tr>
+            <td><strong>Google AdMob</strong> and advertising / measurement partners</td>
+            <td>We apply reasonable efforts consistent with Google publisher tools and policies. You can reset your <strong>advertising ID</strong> in device settings to limit future ad personalization and linkage.</td>
+            <td>We cannot guarantee removal of every historical ad or measurement record across Google’s ad systems solely from a Firebase UID. Retention and user choices are described in <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Advertising Technologies</a> and related policies.</td>
+        </tr>
+        <tr>
+            <td><strong>Google UMP (User Messaging Platform)</strong> — on-device consent state</td>
+            <td>Not deleted by us from Google’s servers via this email flow; consent artifacts are primarily stored <strong>on your device</strong>.</td>
+            <td>Clear app storage, use in-app privacy controls where available, or uninstall the App to remove locally cached consent data.</td>
+        </tr>
+        <tr>
+            <td><strong>Local device storage</strong> (PlayerPrefs: progress, nickname copy, local IDs, settings, etc.)</td>
+            <td>We do <strong>not</strong> remotely wipe another person’s phone. You remove local data by <strong>uninstalling</strong> the App or using the OS “clear storage / clear data” for the App.</td>
+            <td>Excluded from our cloud deletion workflow; still important for a complete local reset.</td>
+        </tr>
+    </tbody>
+</table>
+<p class="note">Identifiers in the pre-filled email are used only to locate your records. We may ask follow-up questions if we cannot match your request to data in our systems. If you cannot access the App, contact <a href="mailto:istudio1319@gmail.com">istudio1319@gmail.com</a> and include as much detail as you safely can to help us verify ownership.</p>
+
 <h2>1. Information We Collect</h2>
 
 <p>We do <strong>not</strong> require you to create a traditional account using your real name, email address, or phone number to play the App. However, the App and its service providers may process certain information, including identifiers and technical data, that may be considered personal data or personal information under applicable law.</p>
@@ -112,7 +182,7 @@
 <h3>1.4 Google Analytics for Firebase</h3>
 <p>The App may use <strong>Google Analytics for Firebase</strong> to understand how users interact with the App and to improve gameplay, balance, features, and overall user experience. Analytics data may include:</p>
 <ul>
-    <li>Gameplay and app interaction events, for example stage start, stage completion, game mode, map type, progression, reward-related events (such as reward requests, rewards granted, and rewarded-ad completion), and screen/view-related events</li>
+    <li>Gameplay events such as stage start, stage completion, game mode, map type, progression, and reward-related events (for example reward requests, rewards granted, and rewarded-ad completion)</li>
     <li>Technical and app usage information such as app version, device type, operating system, and general interaction patterns</li>
     <li>Advertising-related analytics events, including ad placement, ad engagement, and in some cases estimated ad revenue values and currency data associated with impressions or mediation reporting</li>
 </ul>
@@ -143,7 +213,7 @@
 
 <p>Where applicable law requires additional mechanisms, we may configure or update UMP messages and related settings in line with Google’s guidance for the <strong>EEA, UK, Switzerland, certain U.S. states</strong>, and other regions.</p>
 
-<p>The App is <strong>not intended to be directed primarily to children under 13</strong> and is not presented as a child-directed app for purposes such as COPPA-style treatment in advertising settings. The App contains combat/shooting content. Age ratings, content descriptors, and audience classifications for the App are determined by the App’s <strong>Google Play</strong> and <strong>Apple App Store</strong> listings and may vary by region.</p>
+<p>The App is <strong>not intended to be directed primarily to children under 13</strong> and is not presented as a child-directed app for purposes such as COPPA-style treatment in advertising settings. The App contains combat/shooting content. The <strong>recommended minimum age and content descriptors</strong> for the App are those shown on the App’s <strong>Google Play</strong> and <strong>Apple App Store</strong> listings; if those listings differ from this Policy, the store listings control for age-rating purposes.</p>
 
 <h3>1.7 Information we do not intentionally collect directly</h3>
 <p>We do not ask you to enter your real name, postal address, or phone number in order to play the App. We do not use the App as a dedicated feature to collect your precise GPS location.</p>
@@ -201,7 +271,7 @@
 <h2>8. Children's Privacy</h2>
 <p>The App is not intended for children under 13 and is not marketed as a child-directed service. If you are a parent or guardian and believe a child has provided information in a manner inconsistent with applicable law, please contact us so that we can review and take appropriate action.</p>
 
-<p>Age ratings, content descriptors, and audience classifications for <em>Survivor of Last Age</em> are shown on the <strong>Google Play</strong> and <strong>Apple App Store</strong> listings and may vary by region. Parents and guardians should supervise use by minors where appropriate.</p>
+<p>Recommended minimum age and content guidance for the App follow the <strong>Google Play</strong> and <strong>Apple App Store</strong> age ratings and descriptors for <em>Survivor of Last Age</em>. Parents and guardians should supervise use by minors where appropriate.</p>
 
 <h2>9. Your Rights and Choices</h2>
 <p>Depending on your jurisdiction, you may have rights regarding your personal data, including the right to request access, correction, deletion, restriction, objection, portability, or withdrawal of consent, subject to legal exceptions and verification requirements.</p>
@@ -209,13 +279,13 @@
 <ul>
     <li>You may delete local game data by uninstalling the App or clearing app storage/data on your device</li>
     <li>You may adjust certain advertising/privacy choices through the App, where such controls are available</li>
-    <li>You may contact us to request deletion of cloud-stored data associated with your use of the App</li>
+    <li>You may use the process in <a href="#data-deletion">Data deletion requests</a> (or contact us at <a href="mailto:istudio1319@gmail.com">istudio1319@gmail.com</a>) to request deletion of cloud-stored data associated with your use of the App</li>
 </ul>
 
 <p>Because the App may rely on anonymous identifiers rather than direct account registration, we may ask for information reasonably necessary to identify your records, such as your nickname, approximate dates of use, leaderboard details, or other non-public information that helps us verify your request.</p>
 
 <h2>10. Data Deletion Requests</h2>
-<p>If you would like us to delete data stored on our servers that is associated with your use of the App, please contact us at the email address below. We will take reasonable steps to review your request and, where applicable and feasible, delete or de-identify the relevant data, subject to legal, technical, security, fraud-prevention, and recordkeeping requirements.</p>
+<p>For the step-by-step process, the table of data types deleted or retained, and retention notes for the services used in this App, see <strong><a href="#data-deletion">Data deletion requests</a></strong> (near the top of this policy). We will take reasonable steps to review your request and, where applicable and feasible, delete or de-identify the relevant data, subject to legal, technical, security, fraud-prevention, and recordkeeping requirements. You may also contact us at <a href="mailto:istudio1319@gmail.com">istudio1319@gmail.com</a> if you cannot use the in-app flow.</p>
 
 <h2>11. Security</h2>
 <p>We use reasonable administrative, technical, and organizational measures to help protect information related to the App. However, no system can be guaranteed to be completely secure, and we cannot guarantee absolute security.</p>
