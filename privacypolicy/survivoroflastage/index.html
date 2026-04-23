@@ -2,26 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Privacy Policy - iStudio</title>
+    <title>Privacy Policy - iStudio | Survivor of Last Age</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.7;
-            max-width: 800px;
+            line-height: 1.75;
+            max-width: 860px;
             margin: 40px auto;
             padding: 20px;
             background: #fdfdfd;
             color: #222;
         }
-        h1, h2 {
+        h1, h2, h3 {
             color: #1a1a1a;
         }
         ul {
-            padding-left: 20px;
+            padding-left: 22px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0 1.5em;
+            font-size: 0.96em;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background: #f3f3f3;
+        }
+        .note {
+            background: #f7f7f7;
+            border-left: 4px solid #666;
+            padding: 12px 16px;
+            margin: 1.2em 0;
+            font-size: 0.95em;
         }
         .contact {
-            margin-top: 20px;
+            margin-top: 18px;
+        }
+        a {
+            color: #1a73e8;
+        }
+        strong {
+            color: #111;
         }
     </style>
 </head>
@@ -29,61 +57,177 @@
 
 <h1>Privacy Policy</h1>
 
-<p><strong>iStudio</strong> ("we", "our", or "us") respects the privacy of all users.<br>
-This Privacy Policy explains how we collect, use, and safeguard information when you use our mobile application ("app").</p>
+<p><strong>iStudio</strong> ("we", "our", or "us") respects your privacy. This Privacy Policy describes how we collect, use, store, and share information when you use our mobile game <strong>Survivor of Last Age</strong> (the "App"). By downloading, installing, or using the App, you acknowledge this Privacy Policy. Where required by applicable law, we will request your consent before certain processing activities, especially for personalized advertising.</p>
 
 <h2>1. Information We Collect</h2>
-<p>We do not collect any personally identifiable information through this app.<br>
-The app does not request or access sensitive data such as:</p>
+
+<p>We do <strong>not</strong> require you to create a traditional account using your real name, email address, or phone number to play the App. However, the App and its service providers may process certain information, including identifiers and technical data, that may be considered personal data or personal information under applicable law.</p>
+
+<h3>1.1 Information stored locally on your device</h3>
+<p>The App stores some information directly on your device in order to provide gameplay features and save your progress. This may include:</p>
 <ul>
-    <li>Names or email addresses</li>
-    <li>Precise location</li>
-    <li>Device identifiers such as IDFA or GAID</li>
+    <li>Game progress and gameplay data, such as level, experience, coins, weapon upgrades, stage unlocks, settings, and similar in-game data</li>
+    <li>Your chosen <strong>nickname</strong></li>
+    <li>A locally generated identifier (for example, a GUID) that may be used for certain features if cloud sign-in is unavailable</li>
+    <li>Consent and privacy-related flags or tokens that the Google <strong>UMP SDK</strong> (or the operating system) may cache on your device as part of advertising consent flows</li>
+</ul>
+<p>Deleting the App or clearing its local storage usually removes this locally stored information, subject to your device and operating system behavior.</p>
+
+<h3>1.2 Firebase Authentication (anonymous authentication)</h3>
+<p>The App may use <strong>Google Firebase Authentication</strong> with anonymous sign-in. This means the App may create and use an anonymous account identifier in order to support backend features without requiring traditional login credentials.</p>
+<ul>
+    <li>Anonymous user ID (UID)</li>
+    <li>Authentication/session tokens</li>
+    <li>Basic technical metadata required to provide the authentication service securely</li>
+</ul>
+<p>We do not currently require email/password login or social login for normal gameplay.</p>
+
+<h3>1.3 Cloud Firestore</h3>
+<p>The App may use <strong>Google Cloud Firestore</strong> to store certain cloud-based gameplay data, such as leaderboard information.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Feature</th>
+            <th>Examples of data</th>
+            <th>Purpose</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Leaderboards</td>
+            <td>Anonymous UID or local ID, nickname, score, ranking-related values, timestamps</td>
+            <td>To display, maintain, and update rankings and competitive game features</td>
+        </tr>
+        <tr>
+            <td>Nickname registry</td>
+            <td>Normalized or hashed nickname references, display nickname, owner UID, timestamps</td>
+            <td>To help prevent duplicate nicknames and maintain nickname integrity</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Your <strong>nickname and leaderboard score may be visible to other players</strong> in the App. Please do not choose a nickname that includes your real name or other personally identifying information if you wish to remain anonymous.</p>
+
+<h3>1.4 Google Analytics for Firebase</h3>
+<p>The App may use <strong>Google Analytics for Firebase</strong> to understand how users interact with the App and to improve gameplay, balance, features, and overall user experience. Analytics data may include:</p>
+<ul>
+    <li>Gameplay and app interaction events, for example stage start, stage completion, game mode, map type, progression, reward-related events (such as reward requests, rewards granted, and rewarded-ad completion), and screen/view-related events</li>
+    <li>Technical and app usage information such as app version, device type, operating system, and general interaction patterns</li>
+    <li>Advertising-related analytics events, including ad placement, ad engagement, and in some cases estimated ad revenue values and currency data associated with impressions or mediation reporting</li>
+</ul>
+<p>Google’s platform may also collect certain automatically logged or aggregated technical data as described in <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase/Google documentation</a>; the exact categories can depend on SDK configuration and platform defaults.</p>
+
+<h3>1.5 Firebase Crashlytics</h3>
+<p>The App may use <strong>Firebase Crashlytics</strong> to detect, diagnose, and fix crashes and stability problems. Crash and diagnostics data may include:</p>
+<ul>
+    <li>Crash reports and stack traces</li>
+    <li>Device model, OS version, app version, and other technical diagnostics</li>
+    <li>Information about the circumstances leading up to an error or crash</li>
 </ul>
 
-<h2>2. Third-Party Advertising Services</h2>
-<p>To support this app, we use Google AdMob to display ads.</p>
-<p>We have configured AdMob to:</p>
+<h3>1.6 Advertising, device identifiers, and ad consent (Google AdMob)</h3>
+<p>The App may display advertisements using <strong>Google AdMob</strong> and related advertising services. In connection with advertising, Google and its partners may process information such as:</p>
 <ul>
-    <li>Disable personalized advertising</li>
-    <li>Restrict ad content to appropriate audiences</li>
-    <li>Avoid user tracking where possible</li>
-</ul>
-<p>AdMob may collect limited non-personal data such as:</p>
-<ul>
-    <li>Device type and OS version</li>
-    <li>App usage statistics</li>
-    <li>General performance data</li>
-</ul>
-<p>All ads comply with Google's Ad Policies.<br>
-<a href="https://policies.google.com/privacy" target="_blank">AdMob Privacy Policy</a></p>
-
-<h2>3. Analytics and SDKs</h2>
-<p>We do not use analytics tools or third-party SDKs to collect personal data.<br>
-The app does not implement:</p>
-<ul>
-    <li>Login or registration features</li>
-    <li>User profile storage</li>
-    <li>Behavioral tracking</li>
+    <li>Advertising identifiers such as <strong>GAID</strong> on Android or <strong>IDFA</strong> on iOS, where available and permitted</li>
+    <li>IP address</li>
+    <li>Device and app information</li>
+    <li>Ad request, impression, interaction, and performance data</li>
 </ul>
 
-<h2>4. User Rights</h2>
-<p>Users have the right to:</p>
+<p>Depending on your location, device settings, and the choices you make, ads may be <strong>personalized</strong> or <strong>non-personalized</strong>. We may share relevant information with Google and participating advertising partners to deliver, measure, and improve advertising.</p>
+
+<p>When you start the App (and when required by your region or Google’s policies), we use Google’s <strong>User Messaging Platform (UMP)</strong> SDK to update consent information and, where required, to present a <strong>Google-hosted consent / privacy message</strong> (for example choices about personalized advertising, age-related requirements, or U.S. state “Do Not Sell or Share” / restricted data processing style options, depending on how your message is configured in the AdMob / Privacy &amp; messaging console).</p>
+
+<p>UMP may store consent outcomes and related technical data <strong>on your device</strong> and communicate them to Google’s advertising services so that ad requests respect your choices. The exact wording and options come from the message you see, not from a separate custom in-app form built by us for that purpose.</p>
+
+<p>Where applicable law requires additional mechanisms, we may configure or update UMP messages and related settings in line with Google’s guidance for the <strong>EEA, UK, Switzerland, certain U.S. states</strong>, and other regions.</p>
+
+<p>The App is <strong>not intended to be directed primarily to children under 13</strong> and is not presented as a child-directed app for purposes such as COPPA-style treatment in advertising settings. The App contains combat/shooting content. Age ratings, content descriptors, and audience classifications for the App are determined by the App’s <strong>Google Play</strong> and <strong>Apple App Store</strong> listings and may vary by region.</p>
+
+<h3>1.7 Information we do not intentionally collect directly</h3>
+<p>We do not ask you to enter your real name, postal address, or phone number in order to play the App. We do not use the App as a dedicated feature to collect your precise GPS location.</p>
+
+<h2>2. Legal Bases and Consent</h2>
+<p>Depending on your jurisdiction, our legal bases for processing may include:</p>
 <ul>
-    <li>Delete the app to remove all local data</li>
-    <li>Contact us regarding any privacy concerns</li>
+    <li>Your consent, where required</li>
+    <li>Performance of the service you request when using the App</li>
+    <li>Our legitimate interests, such as maintaining security, improving the App, preventing abuse, and understanding app performance, where permitted by law</li>
+    <li>Compliance with legal obligations</li>
 </ul>
-<p>We do not retain or store any user data on our servers.</p>
 
-<h2>5. Contact Us</h2>
-<p>If you have questions about this Privacy Policy, please contact us at:</p>
-<p class="contact">📧 istudio1319@gmail.com</p>
+<p>Where consent is required for personalized advertising or similar processing, you may choose whether to provide that consent. In jurisdictions where applicable law provides additional rights, you may also have the right to withdraw consent or exercise privacy choices later.</p>
 
-<h2>6. Changes to This Policy</h2>
-<p>We may update this Privacy Policy from time to time.<br>
-Any changes will be posted publicly in the app or on our official platforms.</p>
+<h2>3. How We Use Information</h2>
+<ul>
+    <li>To operate, maintain, and improve the App</li>
+    <li>To save progress and provide gameplay features</li>
+    <li>To provide leaderboard functions and nickname uniqueness management</li>
+    <li>To authenticate users anonymously for backend features</li>
+    <li>To understand user behavior, improve gameplay balance, and enhance user experience</li>
+    <li>To detect, prevent, and fix technical issues, crashes, and abuse</li>
+    <li>To show ads, manage ad preferences, and measure advertising performance</li>
+    <li>To comply with legal obligations and respond to valid legal requests</li>
+</ul>
 
-<p><strong>Last Updated: Fabuary 20, 2026</strong></p>
+<h2>4. Third-Party Services</h2>
+<p>The App uses third-party services, including services provided by Google. Their processing of data is governed by their own terms and privacy policies. Relevant resources include:</p>
+<ul>
+    <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security</a></li>
+    <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Advertising Technologies</a></li>
+</ul>
+
+<h2>5. Sharing of Information</h2>
+<p>We do not sell your personal information in the traditional sense of exchanging it directly for money. However, we may share certain identifiers, technical data, and advertising-related information with Google and advertising/measurement partners in order to serve ads, measure performance, or support personalized or non-personalized advertising. Under some laws, this kind of sharing may be considered “sharing” or “selling” for privacy law purposes.</p>
+
+<p>We may also disclose information:</p>
+<ul>
+    <li>To service providers that help us operate the App</li>
+    <li>To comply with legal obligations, court orders, or lawful requests</li>
+    <li>To protect our rights, users, systems, and the integrity of the App</li>
+    <li>As part of a business transaction such as a merger, acquisition, or asset transfer, subject to applicable law</li>
+</ul>
+
+<h2>6. Data Retention</h2>
+<p>We retain information only for as long as reasonably necessary to provide the App, operate game features, maintain records, resolve disputes, enforce agreements, comply with legal obligations, and pursue legitimate business interests.</p>
+
+<p>Locally stored data generally remains on your device until you delete the App or clear local app data. Cloud-hosted information, including leaderboard-related records, may remain on our or our service providers’ systems until it is deleted, de-identified, no longer needed, or removed in accordance with our operational practices and legal obligations.</p>
+
+<h2>7. International Data Transfers</h2>
+<p>Your information may be processed on servers located outside your country of residence. Because Google and other service providers may operate globally, your information may be transferred to and processed in countries that may have different data protection rules than your country. Where required by law, appropriate safeguards may be used.</p>
+
+<h2>8. Children's Privacy</h2>
+<p>The App is not intended for children under 13 and is not marketed as a child-directed service. If you are a parent or guardian and believe a child has provided information in a manner inconsistent with applicable law, please contact us so that we can review and take appropriate action.</p>
+
+<p>Age ratings, content descriptors, and audience classifications for <em>Survivor of Last Age</em> are shown on the <strong>Google Play</strong> and <strong>Apple App Store</strong> listings and may vary by region. Parents and guardians should supervise use by minors where appropriate.</p>
+
+<h2>9. Your Rights and Choices</h2>
+<p>Depending on your jurisdiction, you may have rights regarding your personal data, including the right to request access, correction, deletion, restriction, objection, portability, or withdrawal of consent, subject to legal exceptions and verification requirements.</p>
+
+<ul>
+    <li>You may delete local game data by uninstalling the App or clearing app storage/data on your device</li>
+    <li>You may adjust certain advertising/privacy choices through the App, where such controls are available</li>
+    <li>You may contact us to request deletion of cloud-stored data associated with your use of the App</li>
+</ul>
+
+<p>Because the App may rely on anonymous identifiers rather than direct account registration, we may ask for information reasonably necessary to identify your records, such as your nickname, approximate dates of use, leaderboard details, or other non-public information that helps us verify your request.</p>
+
+<h2>10. Data Deletion Requests</h2>
+<p>If you would like us to delete data stored on our servers that is associated with your use of the App, please contact us at the email address below. We will take reasonable steps to review your request and, where applicable and feasible, delete or de-identify the relevant data, subject to legal, technical, security, fraud-prevention, and recordkeeping requirements.</p>
+
+<h2>11. Security</h2>
+<p>We use reasonable administrative, technical, and organizational measures to help protect information related to the App. However, no system can be guaranteed to be completely secure, and we cannot guarantee absolute security.</p>
+
+<h2>12. Changes to this Privacy Policy</h2>
+<p>We may update this Privacy Policy from time to time. If we make material changes, we may notify users through the App, through the app store listing, or by updating this page. Your continued use of the App after an updated Privacy Policy becomes effective may be treated as acceptance of the updated policy where permitted by law.</p>
+
+<h2>13. Contact Us</h2>
+<p>If you have any questions, requests, or concerns about this Privacy Policy or privacy practices relating to the App, please contact us at:</p>
+<p class="contact"><strong>Email:</strong> <a href="mailto:istudio1319@gmail.com">istudio1319@gmail.com</a></p>
+
+<p><strong>Last updated: April 23, 2026</strong></p>
 
 </body>
 </html>
